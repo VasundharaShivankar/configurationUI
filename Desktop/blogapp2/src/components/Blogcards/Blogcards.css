@@ -6,7 +6,7 @@
     border-radius: 10px;
     box-shadow: 1px 2px 5px black;
     width:550px;
-    height: 200px;
+    height: auto;
 }
 .blog-cards:hover{
     transform: scale(1.005);
@@ -35,4 +35,15 @@
     font-weight: 500;
     margin:10px;
     font-size: 16px;
+}
+.blog-date{
+    font-weight: 400;
+    font-size: 12px;
+}
+.blog-category{
+    margin:10px;
+    background-color: azure;
+    padding:5px;
+    border-radius:17px;
+
 }
