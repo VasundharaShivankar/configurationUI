@@ -7,6 +7,8 @@
     box-shadow: 1px 2px 5px black;
     width:550px;
     height: auto;
+    text-decoration: none;
+    color:black;
 }
 .blog-cards:hover{
     transform: scale(1.005);
