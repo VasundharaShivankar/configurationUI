@@ -1,14 +1,19 @@
 import React from 'react';
-import { birthdayCakes } from './../../data';
-import ShopCards from '../../components/ShopCards/ShopCards';
-import "./Home.css"
+import { weddingCakes,theme } from './../../data';
+import ShopCards from './../../components/ShopCards/ShopCards';
+import "./Wedding.css"
 
-function Home() {
+function Wedding() {
   return (<>
-    <h1 className="page-title">Birthday Cakes</h1>
+  <div 
+  style={{
+    backgroundColor: theme.backgroundColor1,
+    backgroundImage: theme.backgroundImage1
+    }}>
+    <h1 className="page-title" >Wedding Cakes</h1>
     <div className="products-container">
       {
-        birthdayCakes.map((productData, i) => {
+        weddingCakes.map((productData, i) => {
           const {
             id,
             title,
@@ -30,8 +35,9 @@ function Home() {
         })
       }
     </div>
+    </div>
     </>
   )
 }
 
-export default Home;
+export default Wedding;
