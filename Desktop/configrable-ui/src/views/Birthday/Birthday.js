@@ -4,7 +4,7 @@ import ShopCards from './../../components/ShopCards/ShopCards';
 import "./Birthday.css"
 
 function Birthday() {
-    return (
+    return (<>
         <div
             style={{
                 backgroundColor: theme.backgroundColor1,
@@ -39,6 +39,8 @@ function Birthday() {
                 }
             </div>
             </div>
+
+        </>
         )
 }
 

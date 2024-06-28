@@ -1,3 +1,7 @@
+import facebook from "./components/Footer/icons/facebook.png"
+import twitter from "./components/Footer/icons/twitter.png"
+import instagram from "./components/Footer/icons/instagram.png"
+
 const birthdayCakes = [
     {
         id:"100",
@@ -180,8 +184,42 @@ const theme={
   backgroundImage2: "linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%)"
 }
 
+const footerData = {
+  address: {
+    line1: "Pragati Colony",
+    line2: "Sendurwafa",
+    city: "Sakoli",
+    state: "Maharashtra",
+    zip: "441904"
+  },
+  contact: {
+    phone: "9970059488",
+    email: "vasundharashivankar179@gmail.com"
+  },
+  socialLinks: [
+    {
+      name: "Facebook",
+      url: "https://www.instagram.com/vasundhara_shivankar/",
+      icon:facebook
+    },
+    {
+      name: "Twitter",
+      url: "https://www.instagram.com/vasundhara_shivankar/",
+      icon:twitter
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/vasundhara_shivankar/",
+      icon:instagram
+    }
+  ],
+  copyright: "© 2024 BumbbleBee Cake Shop. All Rights Reserved."
+};
+
+
 export { 
     birthdayCakes,
     weddingCakes,
-    theme
+    theme,
+    footerData
  }
