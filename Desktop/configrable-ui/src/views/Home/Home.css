@@ -11,3 +11,15 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.home .cakes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .home .reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

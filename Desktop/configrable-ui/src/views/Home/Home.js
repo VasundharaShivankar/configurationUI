@@ -1,42 +1,49 @@
 import React from 'react';
-import { birthdayCakes } from './../../data';
-import ShopCards from '../../components/ShopCards/ShopCards';
 import "./Home.css"
 import Footer from "./../../components/Footer/Footer"
-import { footerData, navData } from './../../data';
+import { footerData, navData} from './../../data';
+import themeHome from "./../../data"
 import Navbar from '../../components/Navbar/Navbar';
+import "./../../index"
 
-function Home() {
+const Home = ({ themeHome, welcome, featuredCakes, reviews }) => {
   return (<>
  <Navbar logo={navData.logo} links={navData.links} />
-    <h1 className="page-title">Birthday Cakes</h1>
-    <div className="products-container">
-      {
-        birthdayCakes.map((productData, i) => {
-          const {
-            id,
-            title,
-            img,
-            description,
-            price,
-            productDetails
-          } = productData
 
-          return (<ShopCards
-            key={i}
-            id={id}
-            img={img}
-            title={title}
-            description={description}
-            price={price}
-            productDetails={productDetails}
-          />)
-        })
-      }
+    <div className="home" style={themeHome.container}>
+      <section className="welcome-section" style={themeHome.welcomeSection}>
+        <h1 style={themeHome.welcomeTitle}>{welcome.title}</h1>
+        <p style={themeHome.welcomeText}>{welcome.text}</p>
+      </section>
+
+      <section className="featured-cakes-section" style={themeHome.featuredCakesSection}>
+        <h2 style={themeHome.featuredCakesTitle}>Featured Cakes</h2>
+        <div className="cakes">
+          {featuredCakes.map((cake, index) => (
+            <div key={index} className="cake" style={themeHome.cake}>
+              <img src={cake.image} alt={cake.name} style={themeHome.cakeImage} />
+              <h3 style={themeHome.cakeName}>{cake.name}</h3>
+              <p style={themeHome.cakeDescription}>{cake.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="reviews-section" style={themeHome.reviewsSection}>
+        <h2 style={themeHome.reviewsTitle}>Customer Reviews</h2>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {reviews.map((review, index) => (
+            <div key={index} className="review" style={themeHome.review}>
+              <h3 style={themeHome.reviewName}>{review.name}</h3>
+              <p style={themeHome.reviewText}>{review.text}</p>
+              <span style={themeHome.reviewRating}>{review.rating} stars</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
-
     <div className="App">
-      {/* Other components */}
       <Footer
         address={footerData.address}
         contact={footerData.contact}
@@ -47,6 +54,5 @@ function Home() {
     </>
   )
 }
-
 
 export default Home;

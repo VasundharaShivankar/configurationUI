@@ -1,9 +1,10 @@
 .page-title{
-    font-size: 35px;
+    font-size: 40px;
     font-family: Tahoma, sans-serif;
     font-weight:100px;
     text-align:center;
     margin:25px;
+    color: #8E0C67;
 }
 .products-container{
     display: flex;

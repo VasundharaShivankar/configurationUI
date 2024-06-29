@@ -2,6 +2,10 @@ import facebook from "./components/Footer/icons/facebook.png";
 import twitter from "./components/Footer/icons/twitter.png";
 import instagram from "./components/Footer/icons/instagram.png";
 import logoImage from './components/Navbar/logo.png';
+import cakeImage1 from './views/Home/images/cake1.jpg';
+import cakeImage2 from './views/Home/images/cake2.jpg';
+import cakeImage3 from './views/Home/images/cake3.jpg';
+
 
 const navData = {
   logo: {
@@ -19,7 +23,7 @@ const navData = {
     },
     {
       label: 'Birthday',
-      url: '/menu'
+      url: '/birthday'
     },
     {
       label: 'Wedding',
@@ -40,7 +44,7 @@ const birthdayCakes = [
     {
         id:"100",
         img: "https://www.fnp.com/images/pr/l/v200/butterscotch-birthday-cake-half-kg_1.jpg",
-        title: "Butterscotch Birthday Cake- Half Kg",
+        title: "Butterscotch Birthday Cake- Half Kg Cake",
         price: "₹ 799",
         description: "Indulge them in the decadent delight of our butterscotch cake, crafted to elevate celebrations with its rich, caramelised flavours. Perfect for those who savour life's sweetness, this cake is a symphony of buttery notes and golden caramel, making every bite an exquisite treat. Gift this to add a touch of joy to any occasion.",
         productDetails: {
@@ -57,7 +61,7 @@ const birthdayCakes = [
     {
         id:"200",
         img: "https://www.fnp.com/images/pr/l/v200/butterscotch-crunch-cake-half-kg_1.jpg",
-        title: "Butterscotch Crunch Cake- Half Kg",
+        title: "Butterscotch Crunch Cake- Half Kg Cake",
         price: "₹ 799",
         description: "Delight in the sweet sophistication of our Butterscotch cream cake, adorned with a heartfelt Happy Birthday. With its rich butterscotch flavour and creamy layers, it's a delectable gift for birthdays. Treat your loved ones to a moment of indulgence and joy with this special creation, a gesture that speaks volumes of love and appreciation. Perfect for anyone who deserves a slice of happiness on their special day.",
         productDetails: {
@@ -74,7 +78,7 @@ const birthdayCakes = [
     {
         id:"300",
         img: "https://www.fnp.com/images/pr/l/v200/birthday-bliss-red-velvet-cake-half-kg_1.jpg",
-        title: "Birthday Bliss Red Velvet Cake- Half Kg",
+        title: "Birthday Bliss Red Velvet Cake- Half Kg cake",
         price: "₹ 899",
         description: "Celebrate in style with our exquisite Red Velvet cream cake, adorned with a heartfelt Happy Birthday.  Bursting with luxurious red velvet flavour and sumptuous cream layers, it's the perfect gift for birthdays. Indulge your loved ones with this decadent delight, a sweet reminder of love and joy on their special day. Ideal for anyone who deserves a taste of pure happiness.",
         productDetails: {
@@ -125,7 +129,7 @@ const birthdayCakes = [
     {
         id:"600",
         img: "https://www.fnp.com/images/pr/x/v20200901213927/teddy-bear-2-tier-truffle-cake-15-kg_1.jpg",
-        title: "Teddy Bear 2 Tier Truffle Cake 15 Kg",
+        title: "Teddy Bear 2 Tier Truffle Cake 15 Kg cake",
         price: "₹ 3025",
         description: "This designer cake is a delicious blend of rich chocolate cream and delicate fondant flavours. The cake stand, cutlery & accessories used in the image are only for representation purposes. They are not delivered with the cake. This cake is hand delivered in a good quality cardboard box The layers of fluffy vanilla sponge with a subtle floral essence perfectly complements the decadent chocolate cream filling. The cake adds a touch of elegance with its delicate piped roses in a range of pastel colours.",
            productDetails: {
@@ -179,7 +183,7 @@ const weddingCakes = [
         {
           id: "900",
           img: "https://www.fnp.com/images/pr/l/v200/fruit-overload-cake-half-kg-eggless_1.jpg",
-          title: "Fruit Overload Cake Half Kg Eggless",
+          title: "Fruit Overload Cake Half Kg Eggless Cake",
           price: "₹ 725",
           description: "Make your wedding day even more special with our elegant tiered wedding cake. Crafted with love and attention to detail, this cake features delicate fondant decorations and layers of moist sponge. It's a symbol of love and celebration, perfect for sharing with family and friends.",
           productDetails: {
@@ -215,8 +219,136 @@ const weddingCakes = [
 const theme={
   backgroundColor1:"#8da4ff",
   backgroundImage1: "linear-gradient(45deg, #8da4ff 0%, #f947ed 46%, #ffe24b 100%)",
-  backgroundImage2: "linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%)"
-}
+  backgroundImage3: "linear-gradient( 135deg, #F761A1 10%, #8C1BAB 100%)",
+  backgroundColor2: "#ff8284",
+  backgroundImage2: "linear-gradient(225deg, #ff8284 0%, #ff62a3 50%, #ff006a 100%)",
+  }
+
+const themeHome = {
+  container: {
+    fontFamily: 'Arial, sans-serif', 
+    backgroundColor:"#8da4ff",
+    backgroundImage: "linear-gradient(45deg, #8da4ff 0%, #f947ed 46%, #ffe24b 100%)",
+    padding: '20px',
+    color: '#98002C', 
+    fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif",
+    backgroundSize:"cover"
+  },
+  welcomeSection: {
+    textAlign: 'center',
+    marginBottom: '40px',
+  },
+  welcomeTitle: {
+    fontSize: '50px',
+    color: '#8E0C67 ',
+    marginTop:'10px', 
+    fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+  },
+  welcomeText: {
+    marginTop:'10px',
+    fontSize: '35px', 
+    fontFamily: "'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif"
+  },
+  featuredCakesSection: {
+    marginBottom: '40px',
+  },
+  featuredCakesTitle: {
+    fontSize: '40px',
+    color: '#8E0C67 ',
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+  cake: {
+    width: '350px',
+    margin: '10px',
+    textAlign: 'center',
+  },
+  cakeImage: {
+    width: '100%',
+    height: 'auto',
+    borderRadius: '10px',
+    border:"5px solid white",
+    boxShadow: "1px 2px 5px black"
+  },
+  cakeName: {
+    fontSize: '1.2em',
+    margin: '10px 0',
+  },
+  cakeDescription: {
+    fontSize: '1em',
+  },
+  reviewsSection: {
+    marginBottom: '40px',
+
+  },
+  reviewsTitle: {
+    fontSize: '40px',
+    color: '#8E0C67 ',
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+  review: {
+    width: '300px',
+    margin: '10px auto',
+    padding: '10px',
+    border: '1px solid black',
+    borderRadius: '5px',
+    textAlign: 'center',
+    backgroundColor: '#fff',
+  },
+  reviewName: {
+    fontSize: '30px',
+    marginBottom: '10px',
+  },
+  reviewText: {
+    fontSize: '25px',
+  },
+  reviewRating: {
+    fontSize: '0.9em',
+    color: '#ffb400',
+  },
+};
+
+const homeData = {
+  welcome: {
+    title: 'Welcome to Bumblebee Cake Shop',
+    text: 'Delicious cakes made with love and the finest ingredients. Come and taste the difference!',
+  },
+  featuredCakes: [
+    {
+      name: 'Chocolate Delight',
+      description: 'A rich and moist chocolate cake topped with creamy chocolate ganache.',
+      image: cakeImage1,
+    },
+    {
+      name: 'Strawberry Dream',
+      description: 'A light and fluffy cake with fresh strawberries and whipped cream.',
+      image: cakeImage2,
+    },
+    {
+      name: 'Lemon Bliss',
+      description: 'A tangy and sweet lemon cake with a zesty lemon glaze.',
+      image: cakeImage3,
+    },
+  ],
+  reviews: [
+    {
+      name: 'Alice Johnson',
+      text: 'The best cake I\'ve ever had! Highly recommend the Chocolate Delight.',
+      rating: 5,
+    },
+    {
+      name: 'Bob Smith',
+      text: 'Amazing cakes and excellent service. The Strawberry Dream is a must-try.',
+      rating: 4,
+    },
+    {
+      name: 'Cathy Brown',
+      text: 'Loved the Lemon Bliss! Perfect balance of sweet and tangy.',
+      rating: 5,
+    },
+  ],
+};
 
 const footerData = {
   address: {
@@ -250,11 +382,12 @@ const footerData = {
   copyright: "© 2024 BumbbleBee Cake Shop. All Rights Reserved."
 };
 
-
+export default themeHome;
 export { 
-    birthdayCakes,
-    weddingCakes,
-    theme,
-    footerData, 
-    navData
- }
+  birthdayCakes, 
+  weddingCakes, 
+  theme, 
+  footerData, 
+  navData, 
+  homeData, 
+ };

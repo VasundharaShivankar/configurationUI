@@ -5,12 +5,19 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import Home from "./views/Home/Home"
 import Birthday from './views/Birthday/Birthday';
 import Wedding from './views/Wedding/Wedding';
+import { footerData, navData, homeData } from './data';
+import themeHome from './data';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router=createBrowserRouter([
   {
     path: "/",
-    element: <h1><Home/></h1>
+    element: <h1> <Home
+    themeHome={themeHome}
+    welcome={homeData.welcome}
+    featuredCakes={homeData.featuredCakes}
+    reviews={homeData.reviews}
+  /></h1>
   },
   {
     path:"/birthday",

@@ -1,14 +1,19 @@
-.navbar {
-    background-color: #f8f8f8;
+.navbar {   
+  background: rgb(255,48,164);
+  background: radial-gradient(circle, rgba(255,48,164,0.9389005602240896) 0%, rgba(188,0,143,1) 80%);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height:110px;
+    margin-top:0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .navbar-logo img {
-    height: 40px;
+    height: 60px;
+    margin: 30px;
   }
   
   .navbar-links {

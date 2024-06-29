@@ -10,8 +10,8 @@ function ShopCards({ id, img, title , price, productDetails }) {
     style={{
       backgroundImage: 
       id === "100" || id === "200" || id === "300" || id === "400" || id === "500" || id === "600"
-      ? theme.backgroundImage2
-      : theme.backgroundImage1,
+      ? theme.backgroundImage3
+      : theme.backgroundImage2,
       backgroundSize: 'cover',
     }}>
       <img src={img} alt="product-img" className="product-img" />
