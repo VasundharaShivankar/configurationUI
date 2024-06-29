@@ -1,6 +1,40 @@
-import facebook from "./components/Footer/icons/facebook.png"
-import twitter from "./components/Footer/icons/twitter.png"
-import instagram from "./components/Footer/icons/instagram.png"
+import facebook from "./components/Footer/icons/facebook.png";
+import twitter from "./components/Footer/icons/twitter.png";
+import instagram from "./components/Footer/icons/instagram.png";
+import logoImage from './components/Navbar/logo.png';
+
+const navData = {
+  logo: {
+    src: logoImage,
+    alt: 'Cake Shop Logo'
+  },
+  links: [
+    {
+      label: 'Home',
+      url: '/'
+    },
+    {
+      label: 'About',
+      url: '/about'
+    },
+    {
+      label: 'Birthday',
+      url: '/menu'
+    },
+    {
+      label: 'Wedding',
+      url: '/wedding'
+    },
+    {
+      label: 'Contact',
+      url: '/contact'
+    },
+    {
+      label: 'Order Now',
+      url: '/order'
+    }
+  ]
+};
 
 const birthdayCakes = [
     {
@@ -221,5 +255,6 @@ export {
     birthdayCakes,
     weddingCakes,
     theme,
-    footerData
+    footerData, 
+    navData
  }

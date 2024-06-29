@@ -14,7 +14,7 @@ const Footer = ({ address, contact, socialLinks, copyright }) => {
         <div className="footer-section">
           <h4>Get in Touch</h4>
           <p>Phone: {contact.phone}</p>
-          <p>Email: <a href={`mailto:${contact.email}`}>{contact.email}</a></p>
+          <p>Email: <a href={`mailto:${contact.email}`} className="email">{contact.email}</a></p>
         </div>
         <div className="footer-section">
           <h4>Follow Us</h4>
